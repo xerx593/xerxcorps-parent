@@ -23,7 +23,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.xerxcorps</groupId>
   <artifactId>xerxcorps-parent</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Xerxcorps Paret Pom</name>
   <description>Xerxcorps Parent Pom Project</description>
@@ -135,7 +135,7 @@
           <artifactId>maven-release-plugin</artifactId>
           <version>3.0.0-M4</version>
           <configuration>
-            <preparationGoals>clean verify site site:stage scm-publish:publish-scm</preparationGoals>
+            <completionGoals>site site:stage scm-publish:publish-scm</completionGoals>
           </configuration>
         </plugin>
         <plugin>
