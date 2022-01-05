@@ -55,7 +55,6 @@
     <connection>scm:git:https://github.com/xerx593/${project.artifactId}.git</connection>
     <developerConnection>scm:git:https://github.com/xerx593/${project.artifactId}.git</developerConnection>
     <url>https://github.com/xerx593/${project.artifactId}/</url>
-    <tag>xerxcorps-parent-1.0.0</tag>
   </scm>
 
   <distributionManagement>
