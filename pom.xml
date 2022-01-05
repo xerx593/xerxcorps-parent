@@ -23,7 +23,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.xerxcorps</groupId>
   <artifactId>xerxcorps-parent</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Xerxcorps Paret Pom</name>
   <description>Xerxcorps Parent Pom Project</description>
@@ -89,7 +89,18 @@
           <version>3.1.0</version>
           <configuration>
             <scmBranch>gh-pages</scmBranch>
+            <!-- mono-module doesn't require site:stage -->
+            <content>${project.reporting.outputDirectory}</content>
           </configuration>
+          <executions>
+            <execution>
+              <id>scm-publish</id>
+              <phase>site-deploy</phase><!-- deploy site with maven-scm-publish-plugin -->
+              <goals>
+                <goal>publish-scm</goal>
+              </goals>
+            </execution>
+          </executions>
         </plugin>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
